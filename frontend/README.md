@@ -1,4 +1,4 @@
-# todo-list-test
+# todo-list-frontend
 
 ## Project setup
 ```
