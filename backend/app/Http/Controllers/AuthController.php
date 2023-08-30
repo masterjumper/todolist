@@ -29,7 +29,7 @@ class AuthController extends Controller
             [
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password, ['rounds' => 10])
             ]
             );
         return response()->json([

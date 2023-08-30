@@ -25,8 +25,7 @@ export default {
                     
             ).catch(
               (errors) => {                
-                /* let desc = ''
-                console.log(errors.response.data.error)
+                /* let desc = ''                
                 errors.response.data.map(
                   (e)=>{desc = desc + ' ' + e}
                 ) */
@@ -55,7 +54,7 @@ export default {
           },
 
           setAuthIsReady(state, payload) {
-            state.authIsReady = payload
+            state.authIsReady = payload            
           },
     }
     

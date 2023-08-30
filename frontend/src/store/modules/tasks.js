@@ -19,16 +19,16 @@ export default {
         async updateTask(context, payload) {
             setTimeout(() => {
                 context.commit('updateTask', payload)
-              }, 100)              
-              
-              await axios.patch('/api/tasks', payload)
+              }, 100)                            
+              await axios.patch('/api/tasks/' + payload.id ,payload)
         },
 
         async deleteTask(context, payload) {
+
             setTimeout(() => {
               context.commit('deleteTask', payload)
-            }, 100),            
-            await axios.delete('/api/tasks', payload)
+            }, 100)            
+            await axios.delete('/api/tasks/' + payload)
         },
 
         async addTask(context, payload) {
@@ -38,12 +38,11 @@ export default {
     },
 
     mutations: {
-        set_allTasks(state, payload){            
-            state.tasks = payload.data
+        set_allTasks(state, payload){                        
+            state.tasks = payload.data;
         },
 
-        addTask(state, payload) {
-            /* state.tasks.push(payload); */
+        addTask(state, payload) {            
             state.tasks = [payload, ...state.tasks];
         },
 
@@ -58,7 +57,7 @@ export default {
         },
 
         deleteTask(state, payload) {
-            const index = state.tasks.findIndex(item => item.id == payload.id)
+            const index = state.tasks.findIndex(item => item.id == payload)
             state.tasks.splice(index, 1)
         },
     },

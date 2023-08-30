@@ -3,8 +3,8 @@
   <v-row dense>
     <div v-if="tasks.length">
       <v-col cols="12">
-        <TaskItem v-for="task in tasks" :key="task.id" :task="task" :isCompleted="task.isCompleted" :isEditing="task.isEditing">
-        </TaskItem>        
+        <TaskItem v-for="task in tasks" :key="task.id" :task="task" :isCompleted="task.isCompleted" :isEditing="task.isEditing">                    
+        </TaskItem>
       </v-col>
     </div>
     <div v-else>         
@@ -31,8 +31,8 @@ export default {
 
   },
 
-  mounted(){
-      this.$store.dispatch('tasks/getallTasks')
+  mounted(){      
+      this.$store.dispatch('tasks/getallTasks')      
   }
 }
 </script>

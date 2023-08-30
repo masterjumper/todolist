@@ -10,7 +10,7 @@
     </template>
     <div v-else>
         <v-btn class="ma-2" @click="login">Login</v-btn>        
-      </div>
+    </div>
   </v-app-bar>
 </template>
 
