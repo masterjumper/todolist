@@ -17,7 +17,7 @@ export default {
 
     return {
       login() {
-        router.push('/')
+        router.push({ name: 'Home' })
       },
     }
   },

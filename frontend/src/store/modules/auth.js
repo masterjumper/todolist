@@ -20,7 +20,7 @@ export default {
               (res)=>{
                         context.commit('setUser', res.data)
                         context.commit('setAuthIsReady', true) 
-                        router.push('/home')                                             
+                        router.push({ name: 'Home' })                                             
                       }
                     
             ).catch(
@@ -30,7 +30,7 @@ export default {
                   (e)=>{desc = desc + ' ' + e}
                 ) */
                 
-                router.push('/')
+                router.push({ name: 'Home' })
               }
               )
             
