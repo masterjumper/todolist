@@ -6,7 +6,7 @@
         <TaskItem v-for="task in tasks" :key="task.id" :task="task">                    
         </TaskItem>
       </v-col>
-    </div>
+    </div>    
   </v-row>
 </v-container>                
 </template>
@@ -15,10 +15,11 @@
 import { mapGetters } from "vuex";
 import TaskItem from './TaskItem.vue';
 
+
 export default {
   name: 'TasksList',
   components: {
-    TaskItem,
+    TaskItem
   },
   computed: {                    
       ...mapGetters({tasks:'tasks/tasks'}),            

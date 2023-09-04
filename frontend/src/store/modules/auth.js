@@ -24,12 +24,7 @@ export default {
                       }
                     
             ).catch(
-              (errors) => {                
-                /* let desc = ''                
-                errors.response.data.map(
-                  (e)=>{desc = desc + ' ' + e}
-                ) */
-                
+              () => {                                                
                 router.push({ name: 'Home' })
               }
               )
@@ -44,7 +39,7 @@ export default {
             }       
             commit('setUser', payload)
             commit('setAuthIsReady', false)  
-            router.push('/')          
+            router.push({ name: 'Home' })          
           }
     },
     mutations: {
