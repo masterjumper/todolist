@@ -22,7 +22,8 @@ class TasksController extends Controller
         
         return response()->json(
             [   'status' => true,
-                'message' => 'Task created successfully'
+                'message' => 'Task created successfully',
+                'task_id'=>$task['id']
             ], 200
         );
     }
