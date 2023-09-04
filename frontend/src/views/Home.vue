@@ -1,6 +1,10 @@
 <template>
   <v-container fluid fill-height>
-    <Navbar  />
+    <v-row align="center" justify="center">
+      <v-col cols="12" sm="8" md="4">
+        <Navbar  />
+      </v-col>
+    </v-row>
     <div  v-if="authIsReady">
       <v-row align="center" justify="center">
         <v-col cols="12" sm="8" md="4">
@@ -20,12 +24,11 @@
 import { mapGetters } from "vuex";
 import AddNewTask from '../components/AddNewTask.vue'
 import TasksList from '../components/TasksList.vue'
-import Spinner from '../components/Spinner.vue'
 import Navbar from '../components/Navbar.vue'
 
 export default {
   name: 'Home',  
-  components: {Navbar, AddNewTask,  TasksList, Spinner},  
+  components: {Navbar, AddNewTask,  TasksList},  
   computed: {                    
       ...mapGetters({user:"auth/user", authIsReady:"auth/authIsReady"}),      
   },    

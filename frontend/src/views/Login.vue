@@ -5,7 +5,7 @@
       <v-col cols="12" sm="8" md="4">
         <v-card>
           <v-card-title class="justify-center">
-            Log In
+            <!-- Log In -->
           </v-card-title>
           <v-card-text>
             <v-form @submit.prevent="login">
@@ -21,7 +21,7 @@
                 type="password"
                 required
               ></v-text-field>
-              <v-btn type="submit" color="teal-darken-4">Login</v-btn>
+              <v-btn type="submit" color="teal-darken-4" text="RESGISTRARSE"></v-btn>
             </v-form>
           </v-card-text>
         </v-card>

@@ -18,13 +18,7 @@
 import { mapGetters } from "vuex";
 
 export default {
-  
-  setup() {    
-    return {       
-     
-    }
 
-  },
   computed: {                    
       ...mapGetters({user:"auth/user", authIsReady:"auth/authIsReady"}),      
   },  

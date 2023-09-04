@@ -19,12 +19,14 @@
     <v-list-item>
       <template v-slot:prepend>                                
         <v-card-actions>
-          <div class="justify-self-start">
-            <v-btn icon>                                       
+          <div class="justify-self-start">            
+            <v-btn icon>
               <v-checkbox 
-                v-model="isCompleted" 
-                :disabled="isEditing" 
-                @change="completedTask" >
+                v-model="isCompleted"
+                :model-value="isCompleted ? true:false"
+                :disabled="isEditing ? true:false" 
+                @change="completedTask"
+                color="success">
               </v-checkbox>            
             </v-btn>                                         
           </div>  
@@ -34,7 +36,7 @@
         <v-card-actions>                    
           <div class="justify-self-end">
             <v-btn icon 
-              :disabled="isCompleted">                                       
+              :disabled="isCompleted ? true:false">                                       
               <v-icon class="me-1" icon="mdi-pencil" @click="editTask" ></v-icon>
             </v-btn>  
             <v-btn icon>
@@ -56,21 +58,20 @@ export default {
     task:{
       type: Object,
       required: true,
-    },
-    isCompleted:{
-      type:Boolean}, 
-    isEditing:{
-      type:Boolean}, 
+    },   
   },
+
   data() {
     return {
       'id': this.task.id,
       'description': this.task.description,
       'isCompleted': this.task.isCompleted,
       'isEditing': this.task.isEditing,
-      'beforeEditCache': '',
+      'beforeEditCache': '',     
     }
+    
   }, 
+  
   methods:{
 
     editTask() {
@@ -94,9 +95,9 @@ export default {
 
     deleteTask(task_id) {      
       this.$store.dispatch("tasks/deleteTask", task_id)
-    }
+    },
+  },
 
-  }
 }
 </script>
 

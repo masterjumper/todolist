@@ -1,14 +1,11 @@
 <template>
-<v-container fluid>
-  <v-row dense>
+<v-container fluid fill-height>
+  <v-row>
     <div v-if="tasks.length">
-      <v-col cols="12">
-        <TaskItem v-for="task in tasks" :key="task.id" :task="task" :isCompleted="task.isCompleted" :isEditing="task.isEditing">                    
+      <v-col >
+        <TaskItem v-for="task in tasks" :key="task.id" :task="task">                    
         </TaskItem>
       </v-col>
-    </div>
-    <div v-else>         
-      <!-- <Spinner/>   -->          
     </div>
   </v-row>
 </v-container>                

@@ -32,8 +32,13 @@ export default {
         },
 
         async addTask(context, payload) {
+            
+            await axios.post('/api/tasks', payload).then(
+                (res)=>{                    
+                    payload.id = res.data.task_id                   
+                }
+            )
             context.commit('addTask', payload);
-            await axios.post('/api/tasks', payload)
         },
     },
 
@@ -52,7 +57,7 @@ export default {
                 'id': payload.id,
                 'description': payload.description,
                 'isCompleted': payload.isCompleted,
-                'isEditing': payload.isEditing,
+                'isEditing': false,
               })            
         },
 
