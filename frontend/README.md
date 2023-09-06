@@ -33,3 +33,4 @@ npm install -f
 ```sh
 npm run serve
 ```
+6. Access using the provided base http://localhost:8080/.
