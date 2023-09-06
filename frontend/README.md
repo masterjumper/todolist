@@ -39,6 +39,10 @@ npm run serve
 ```
 
 6. Access using the provided base http://localhost:8080/.
+
+   user: test@gmail.com
+   
+   password: mypassword
    
 ### For Unit Test 
 ```sh
