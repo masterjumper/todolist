@@ -21,6 +21,8 @@ Composer version 2.5.8
 
 git 2.41.0.windows.3
 
+XAMMP with control panel v3.3.0
+
 ### Installation
 
 1. Open cmd
