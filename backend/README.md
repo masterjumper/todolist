@@ -19,7 +19,7 @@ PHP version 8.2.4
 
 Composer version 2.5.8
 
-git 2.41.0.windows.3
+git version 2.41.0
 
 XAMMP with control panel v3.3.0
 
