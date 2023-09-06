@@ -45,6 +45,7 @@ composer install
 cp .env.example .env
 ```
 6. Update the .env file:
+   
     6.1 Update the line
    ```sh
        DB_DATABASE=todolist
