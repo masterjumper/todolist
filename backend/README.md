@@ -19,7 +19,7 @@ PHP version 8.2.4
 
 Composer version 2.5.8
 
-create the db todolist, utf8mb4_general_ci
+git 2.41.0.windows.3
 
 ### Installation
 
