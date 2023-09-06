@@ -25,14 +25,19 @@ git clone https://github.com/masterjumper/todo-list.git
 ```sh
 cd frontend
 ```
+
 4. Install the project dependencies:
+   
 ```sh
-npm install -f
+npm install --legacy-peer-deps
 ```
+
 5. Start the development server:
+
 ```sh
 npm run serve
 ```
+
 6. Access using the provided base http://localhost:8080/.
    
 ### For Unit Test 
