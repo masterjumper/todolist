@@ -44,14 +44,19 @@ composer install
 ```sh
 cp .env.example .env
 ```
-6. Update the .env file, add at the end of .env file
-```sh
-SESSION_DRIVER = cookie
-SESSION_DOMAIN = localhost
-SANCTUM_STATEFUL_DOMAINS=localhost,localhost:8080,localhost:5173,localhost:8000
-SESSION_LIFETIME=120
-```
-7. Run the database migrations:
+6. Update the .env file:
+    6.1 Update the line
+   ```sh
+       DB_DATABASE=todolist
+   ```
+    6.2 Add at the end of file
+    ```sh
+    SESSION_DRIVER = cookie
+    SESSION_DOMAIN = localhost
+    SANCTUM_STATEFUL_DOMAINS=localhost,localhost:8080,localhost:5173,localhost:8000
+    SESSION_LIFETIME=120
+    ```
+8. Run the database migrations:
 ```sh
 php artisan migrate
 ```
