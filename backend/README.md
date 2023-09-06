@@ -17,7 +17,57 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 PHP version 8.2.4
 
-composer version 2.5.8
+Composer version 2.5.8
+
+create the db todolist, utf8_general_ci
+
+### Installation
+
+1. Open cmd
+
+2. Clone the repo
+
+```sh
+git clone https://github.com/masterjumper/todo-list.git
+```
+
+3. Open folder
+
+```sh
+cd backend
+```
+4. Install the project dependencies:
+```sh
+composer install
+```
+5. Configure the .env file:
+```sh
+cp .env.example .env
+```
+6. Update the .env file, add at the end of .env file
+```sh
+SESSION_DRIVER = cookie
+SESSION_DOMAIN = localhost
+SANCTUM_STATEFUL_DOMAINS=localhost,localhost:8080,localhost:5173,localhost:8000
+SESSION_LIFETIME=120
+```
+7. Run the database migrations:
+```sh
+php artisan migrate
+```
+8. Seed the database with sample data:
+```sh
+php artisan db:seed
+```
+
+Usage
+
+8. Start the development server:
+```sh
+php artisan serve
+```
+Access the API using the provided base URL.
+
 
 ## About Laravel
 
