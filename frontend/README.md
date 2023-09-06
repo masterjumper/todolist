@@ -42,6 +42,6 @@ npm run serve
    
 ### For Unit Test 
 ```sh
-npm run test:unit
+npm run test:unit tasks.spec.js
 ```
    
