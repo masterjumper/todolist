@@ -1,0 +1,15 @@
+create a DB named todolist and cotejamiento utf8_general_ci
+Navigate to the project directory: cd [project directory]
+Install dependencies: composer install
+
+Copy the .env.example file and rename it to .env: cp .env.example .env
+
+
+Clone the repository: git clone [repository URL]
+Navigate to the project directory: cd [project directory]
+Install dependencies: composer install
+Copy the .env.example file and rename it to .env: cp .env.example .env
+Generate an application key: php artisan key:generate
+Configure your database connection in the .env file
+Run database migrations: php artisan migrate
+Run database seeders: php artisan db:seed
